@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+#text ul, #text ol, #text center, #text div h2, #text div h3, #info p {
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: "UA Army Labels";
+  src: url("../font/UAArmyLabels.eot");
+  src: local(""), url("../font/UAArmyLabels.woff") format("woff"), url("../font/UAArmyLabels.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+#info h1, nav {
+  font-family: "UA Army Labels";
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #397740;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width: 500px;
+}
+
+* {
+  font-size: 25px;
+  z-index: 0;
+}
+
+nav {
+  background-color: rgba(128, 128, 128, 0.659);
+  border-radius: 10px;
+  padding: 15px;
+}
+nav ul {
+  list-style: none;
+  display: inline;
+  width: 100%;
+}
+nav li {
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+nav a {
+  font-size: 60px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-text-size-adjust: 30px;
+     -moz-text-size-adjust: 30px;
+          text-size-adjust: 30px;
+  line-height: normal;
+  color: black;
+  text-align: center;
+  transition: 0.6s;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: rgba(255, 255, 255, 0.347);
+}
+
+#info {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.208);
+  border-radius: 10px;
+}
+#info h1 {
+  font-size: 100px;
+}
+#info p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#info img {
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
+}
+
+#text div p {
+  text-align: left;
+}
+#text div h2, #text div h3 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#text center {
+  text-align: center;
+}
+#text ul, #text ol {
+  text-align: left;
+  margin-left: 10px;
+}
+#text ul ul, #text ul ol, #text ol ul, #text ol ol {
+  padding-right: 10px;
+}
+#text span#b {
+  font-weight: bold;
+}
+#text span#i {
+  font-style: italic;
+}
+#text span#ib {
+  font-weight: bold;
+  font-style: italic;
+}
+#text span#red {
+  color: rgb(166, 0, 0);
+}
+#text img {
+  width: 60%;
+  border-radius: 25px;
+}
+
+.title {
+  display: grid;
+  padding: 50px;
+  justify-content: center;
+  text-align: center;
+}
+.title h1 {
+  padding: 15px;
+}/*# sourceMappingURL=style.css.map */

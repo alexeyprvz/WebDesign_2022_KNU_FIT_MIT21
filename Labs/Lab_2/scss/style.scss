@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+// font-family: 'Arsenal', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//font-family: 'Roboto', sans-serif;
+
+html {
+    scroll-behavior: smooth;
+}
+
+%regularfont{
+    //font-family: 'Arsenal', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'UA Army Labels';
+    src: url('../font/UAArmyLabels.eot');
+    src: local(''),
+        url('../font/UAArmyLabels.woff') format('woff'),
+        url('../font/UAArmyLabels.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+//font-family: 'UA Army Labels';
+
+%UAfont{
+    font-family: 'UA Army Labels';
+    text-transform: uppercase;
+}
+
+body{
+    background-color: #397740;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 500px;
+}
+
+*{
+    font-size: 25px;    
+    z-index: 0;
+}
+
+nav{
+    @extend %UAfont;
+    background-color: rgba(128, 128, 128, 0.659);
+    border-radius: 10px;
+    padding: 15px;
+    ul{
+        list-style: none;
+        display: inline;
+        width: 100%;
+    }
+    li{
+        display: inline-block;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    a{
+        font-size: 60px;
+    }
+}
+
+a{
+    text-decoration: none;
+    text-size-adjust: 30px;
+    line-height: normal;
+    color: black;
+    text-align: center;
+    transition: 0.6s;
+    &:visited{
+        color: black;
+    }
+    &:hover{
+        color: rgba(255, 255, 255, 0.347);
+    }
+}
+
+#info{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.208);
+    border-radius: 10px;
+    h1{
+        @extend %UAfont;
+        font-size: 100px;
+    }
+    p{
+        @extend %regularfont;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    img{
+        padding: 10px;
+        margin: 10px;
+        width: 70%;
+    }
+}
+
+#text{
+    div{
+        p{
+            text-align: left;
+        }
+        h2, h3{
+            @extend %regularfont;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    center{
+        @extend %regularfont;
+        text-align: center;
+    }
+    ul, ol{
+        text-align: left;
+        @extend %regularfont;
+        margin-left: 10px;
+        ul, ol{
+            padding-right: 10px;
+        }
+    }
+    span{
+        &#b{
+            font-weight: bold;
+        }
+        &#i{
+            font-style: italic;
+        }
+        &#ib{
+            font-weight: bold;
+            font-style: italic;
+        }
+        &#red{
+            color: rgb(166, 0, 0);
+        }
+    }
+    img{
+        width: 60%;
+        border-radius: 25px;
+    }
+}
+
+.title{
+    display: grid;
+    padding: 50px;
+    justify-content: center;
+    text-align: center;
+    h1{
+        padding: 15px;
+    }
+}
