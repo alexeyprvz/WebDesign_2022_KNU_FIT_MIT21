@@ -413,6 +413,7 @@ header #menu-icon:hover {
   width: 20%;
 }
 .volunteers .volunteers-container .volunteer-box .volunteer-content .volunteer-img img {
+  width: 100%;
   border-radius: 30%;
 }
 
