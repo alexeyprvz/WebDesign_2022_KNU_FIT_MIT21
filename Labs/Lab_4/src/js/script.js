@@ -116,6 +116,8 @@ function updateCartTotal() {
     total + " г";
 }
 
+//comments
+
 async function addVolunteer(title, body, imgSrc) {
   var volunteer = document.createElement("div");
   var volunteersContainer = document.querySelector(".volunteers-container");
@@ -133,37 +135,33 @@ async function addVolunteer(title, body, imgSrc) {
   volunteersContainer.append(volunteer);
 }
 
-let response = fetch("https://dummyjson.com/posts?skip=20&limit=5")
-  .then((res) => res.json())
-  .then((json) => pasteText(json.posts));
-console.log(response);
+var users_qtt = 5;
 
-// let response_2 = fetch('https://dummyjson.com/users?skip=20&limit=5').then(res => res.json()).then(json => pastePhoto(json.users))
-// console.log(response_2)
+async function getData() {
+  let response_photos = await fetch(
+    `https://randomuser.me/api/?nat=ua&results=${users_qtt}`
+  ) // nat - національність
+    .then((res) => res.json())
+    .then((json) => json.results);
 
-// var array_imgs = []
+  let response = await fetch(
+    `https://dummyjson.com/posts?skip=20&limit=${users_qtt}`
+  )
+    .then((res) => res.json())
+    .then((json) => json.posts);
+  console.log(response);
 
-// async function pastePhoto(images){
-//     console.log(images)
-//     for (var el = 0; el < images.length; el++){
-//         array_imgs[el] = images[el].image
-//     }
-//     console.log(array_imgs)
-// }
-
-//Вище, якщо відкоментувати рядки та рядок нижче, то можна за допомогою цього ж сайту завантажувати картинки користувачів,
-// але це фото не людей, а роботів, тому для тематики сайту не дуже підходить, але сам код працює
-
-async function pasteText(data) {
-  console.log(data);
-  for (var el = 0; el < data.length; el++) {
-    var title = await data[el].title;
-    var body = await data[el].body;
-    var imgSrc = `./imgs/people/vlntr_${el + 1}.jpg`; //Ось цей рядок закоментувати, а нижній розкоментувати для інших картинок
-    // let imgSrc = `${array_imgs[el]}`
-    await addVolunteer(title, body, imgSrc);
+  for (var el = 0; el < users_qtt; el++) {
+    var title = response[el].title;
+    var body = response[el].body;
+    //var imgSrc = `./imgs/people/vlntr_${el + 1}.jpg`; //фото з папки
+    let imgSrc = `${response_photos[el].picture.large}`; //фото людей api
+    addVolunteer(title, body, imgSrc);
   }
+  console.log(response_photos[el].picture.large);
 }
+
+getData();
 
 //weather
 
