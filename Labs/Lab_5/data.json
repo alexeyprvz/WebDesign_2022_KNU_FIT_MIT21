@@ -1,0 +1,52 @@
+{
+    "tea":[
+        {
+            "id": 1,
+            "title": "Колодязь дракона з озера Сіху",
+            "type": "зелений",
+            "image_link": "./imgs/tea/tea_1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Золоті брови з медовим ароматом із Тунмуґуань",
+            "type": "червоний",
+            "image_link": "./imgs/tea/tea_2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Жовті бруньки з гори Хошань",
+            "type": "жовтий",
+            "image_link": "./imgs/tea/tea_3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Срібні голки з білим ворсом",
+            "type": "білий",
+            "image_link": "./imgs/tea/tea_4.jpg"
+        },
+        {
+            "id": 5,
+            "title": "GABA-улун дорогоцінної наложниці",
+            "type": "улун",
+            "image_link": "./imgs/tea/tea_5.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Луань з провінції Аньхой",
+            "type": "чорний",
+            "image_link": "./imgs/tea/tea_6.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Перлина дракона",
+            "type": "шен пуер",
+            "image_link": "./imgs/tea/tea_7.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Палацовий пуер",
+            "type": "шу пуер",
+            "image_link": "./imgs/tea/tea_8.jpg"
+        }
+    ]
+}
